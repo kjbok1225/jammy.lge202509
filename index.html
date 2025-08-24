@@ -1297,6 +1297,172 @@
                 const currentSection = button.closest('.info-cont-wrap'); // 현재 클릭한 버튼이 속한 section
                 const nextSection = currentSection.nextElementSibling; // 다음 section
 
+                switch(currentSection.id) {                    
+                    case "pop-info1":
+                        if( !$("#chk1-1").is(":checked") ) {
+                            jsErrorMessagePrint("개인정보 수집 이용을 동의해 주세요.");
+                            //  $("#chk1-1").focus();
+                            return;
+                        }
+                        if( !$("#chk2").is(":checked") ) {
+                            jsErrorMessagePrint("유의사항을 확인해 주세요.");
+                            //  $("#chk2").focus();
+                            return;
+                        }
+                        break;
+                    case "pop-info2":
+                        if( $("#f_user_name").val() == "") {
+                            jsErrorMessagePrint("이름을 입력해 주세요.");
+                            //  $("#f_user_name").focus();
+                            return;
+                        }
+                        if( $("#f_user_phone").val() == "" || $("#f_user_phone").val() == 0) {
+                            jsErrorMessagePrint("휴대전화번호를 입력해 주세요.");
+                            //  $("#f_user_phone").focus();
+                            return;
+                        }
+                        if( $("#f_user_birth").val() == "") {
+                            jsErrorMessagePrint("생년월일을 입력해 주세요.");
+                            //  $("#f_user_birth").focus();
+                            return;
+                        } else if ($("#f_user_birth").val().length != 8) {
+                            jsErrorMessagePrint("생년월일 8자리를 입력해 주세요.");
+                            //  $("#f_user_birth").focus();
+                            return;
+                        }
+                        if( $("#f_user_mail").val() == "") {
+                            jsErrorMessagePrint("이메일 주소를 입력해 주세요.");
+                            //  $("#f_user_mail").focus();
+                            return;
+                        }
+                        if( !isValidEmail($("#f_user_mail").val()) ) {
+                            jsErrorMessagePrint("이메일을 정확하게 입력해 주세요");
+                            //  $("#f_user_mail").focus();
+                            return;
+                        } 
+                        console.log("pop-info2");
+                        break;
+                    case "pop-info3":
+                            
+                        if( $("#serviceChk1-1").is(":checked") == false &&  $("#serviceChk1-2").is(":checked") == false) {
+                            jsErrorMessagePrint("현재 LG전자 제품을 선택해 주세요.");
+                            //  $("#serviceChk1-1").focus();
+                            return;
+                        }
+                            
+                        if( $("#f_product_appliances").val() == "") {
+                            jsErrorMessagePrint("보유하고 계신 LG전자 제품을 입력해 주세요.");
+                            //  $("#f_product_appliances").focus();
+                            return;
+                        }
+                            
+                        if( $("#f_product_reason").val() == "") {
+                            jsErrorMessagePrint("LG전자를 좋아하는 이유를 입력해 주세요.");
+                            //  $("#f_product_reason").focus();
+                            return;
+                        }
+                            
+                        if( $("#subscribeChk1-1").is(":checked") == false &&  $("#subscribeChk1-2").is(":checked") == false) {
+                            jsErrorMessagePrint("현재 'LG전자 가전 구독' 서비스를 선택해 주세요.");
+                            //  $("#subscribeChk1-1").focus();
+                            return;
+                        }
+                        console.log("pop-info3");
+                        break;
+                    case "pop-info4":
+                            
+                        if( $("#upload-preview").html() == "") {
+                            jsErrorMessagePrint("이미지를 첨부해 주세요.");
+                            //  $("#f_product_file").focus();
+                            return;
+                        }
+                        console.log("pop-info4");
+                        break;
+                    
+                    case "pop-info5":
+                            
+                        if( !$("input[name='f_main_platform']:checked").val() ) {
+                            jsErrorMessagePrint("활동 중인 SNS 채널을 선택해 주세요.");
+                            //  $("#serviceChk2-1").focus();
+                            return;
+                        }
+
+                        let serviceChk2_1 = $("#serviceChk2-1").is(":checked");
+                        let serviceChk2_2 = $("#serviceChk2-2").is(":checked");
+                        if(serviceChk2_1) {
+                            if( $("#f_main_ig_url").val() == "") {
+                                jsErrorMessagePrint("인스타그램 계정 URL을 입력해 주세요.");
+                                //  $("#f_main_ig_url").focus();
+                                return;
+                            }
+                                
+                            if( !$("input[name='f_main_ig_followers']:checked").val() ) {
+                                jsErrorMessagePrint("인스타그램 팔로워 수를 선택해 주세요.");
+                                //  $("#followChk1-1").focus();
+                                return;
+                            }
+                        }
+                        if(serviceChk2_2) {                            
+                            if( $("#f_main_yt_url").val() == "") {
+                                jsErrorMessagePrint("유튜브 채널 URL을 입력해 주세요.");
+                                //  $("#f_main_yt_url").focus();
+                                return;
+                            }
+                                
+                            if( !$("input[name='f_main_yt_followers']:checked").val() ) {
+                                jsErrorMessagePrint("유튜브 구독자 수를 선택해 주세요.");
+                                //  $("#ytFollowChk1-1").focus();
+                                return;
+                            }
+                        }
+                            
+                        if( !$("input[name='f_main_category']:checked").val() ) {
+                            jsErrorMessagePrint("채널 카테고리를 선택해 주세요.");
+                            //  $("#channelChk1-1").focus();
+                            return;
+                        }
+
+                        if($("#channelChk1-11").prop("checked") && $("#f_main_category_etc").val() == "") {
+                            jsErrorMessagePrint("메인 채널 카테고리 기타를 입력해 주세요.");
+                            return;
+                        }
+                            
+                        if( $("#f_main_concept").val() == "") {
+                            jsErrorMessagePrint("내 채널 컨셉에 대해 입력해 주세요.");
+                            //  $("#f_main_concept").focus();
+                            return;
+                        }
+                            
+                        if( !$("input[name='f_main_part']:checked").val() ) {
+                            jsErrorMessagePrint("희망하는 부문을 1개 선택해 주세요.");
+                            //  $("#hopeChk1-1").focus();
+                            return;
+                        }
+                        console.log("pop-info5");
+                        break;
+                    case "pop-info6":
+                        if( !$("input[name='f_sub_course']:checked").val() ) {
+                            jsErrorMessagePrint("LG전자 앰버서더를 알게 된 경로를 선택해 주세요.");
+                            //  $("#rootType1-1").focus();
+                            return;
+                        }
+
+                        if($("#rootType1-7").prop("checked") && $("#f_sub_course_etc").val() == "") {
+                            jsErrorMessagePrint("LG전자 앰버서더를 알게 된 경로 기타를 입력해 주세요.");
+                            return;
+                        }
+                        break;
+                    case "pop-info7":
+                        jsFormSubmit();
+                        console.log("pop-info7");
+                        return;
+                        break;
+                    default :
+                        console.log("unknown");
+                        break;
+                }
+
+
                 if (nextSection && nextSection.classList.contains('info-cont-wrap')) {
                     // 현재 섹션 숨기기
                     currentSection.classList.remove('active');
