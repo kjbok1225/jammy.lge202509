@@ -1,34 +1,56 @@
+
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="kr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta property="og:locale" content="ko_KR">
-	<meta property="og:site_name" content="LG전자">
-	<meta property="og:type" content="website">
-	<meta name="description" content="LG전자를 좋아하는 찐팬 LG전자 앰버서더 3기 모집">
-	<meta property="og:title" content="LG전자 앰버서더 3기 모집 | LG전자">
-	<meta property="og:description" content="LG전자를 좋아하는 찐팬 LG전자 앰버서더 3기 모집">
-	<meta property="og:image" content="https://www.lge.co.kr/benefits/share1_img.png">
-	<meta property="og:url" content="https://www.lge.co.kr/benefits">
-	<script>
-		(() => {
-			const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
-			if (isMobile) {
-				const { origin, pathname, search, hash } = location;
-				//location.href = origin + pathname + 'm/' + search + hash;
-			}
-		})();
-	</script>
-	<link rel="stylesheet" type="text/css" href="pc/css/common.css">
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>AI Space 이벤트 | Jammy</title>
+    <meta name="description" content="세상의 모든 제품 경험, Jammy에서 나눠볼까요? 그램, 스탠바이미, 스타일러">
+    <meta name="keywords" content="그램후기, 그램프로후기, 스탠바이미후기,스탠마이미고후기, 스타일러후기, 울트라게이밍모니터후기, 시네빔큐브후기">
 
-	<title>LG전자 앰버서더 3기 모집 | LG전자</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="128x128"
+          href="https://jammy.lge.co.kr/assets/common/img/favicon/jammy_favicon_128x128_b.png">
+    <link rel="icon" type="image/png" sizes="128x128"
+          href="https://jammy.lge.co.kr/assets/common/img/favicon//jammy_favicon_128x128_a.png">
+
+    <meta property='og:title' content='나만의 경험 놀이터! | Jammy'/>
+    <meta property='og:description' content='세상의 모든 제품 경험, Jammy에서 나눠볼까요? 그램, 스탠바이미, 스타일러'/>
+    <meta property='og:type' content='website'/>
+    <meta property='og:url' content='https://jammy.lge.co.kr/'/>
+    <meta property='og:image' content='https://jammy.lge.co.kr/assets/common/img/common/ogimage-1200.png'/>
+
+    <meta name='twitter:title' content='나만의 경험 놀이터! | Jammy'/>
+    <meta name='twitter:description' content='세상의 모든 제품 경험, Jammy에서 나눠볼까요? 그램, 스탠바이미, 스타일러'/>
+    <meta name='twitter:card' content='summary'/>
+    <meta name='twitter:url' content='https://jammy.lge.co.kr/'/>
+    <meta name='twitter:image' content='https://jammy.lge.co.kr/assets/common/img/common/ogimage-800.png'/>
+
+    <link rel="canonical" href="https://jammy.lge.co.kr/" />
+
+
+    <script src="https://jammy.lge.co.kr/assets/common/script/jquery.min.js"></script>
+
 </head>
 
 <body>
+<!-- 전체 container start -->
+<div class="overlay_t"> </div>
+    <div class="view-box">
+
+
+    <script>
+        (() => {
+            const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
+            if (isMobile) {
+                const { origin, pathname, search, hash } = location;
+                //location.href = origin + pathname + 'm/' + search + hash;
+            }
+        })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="pc/css/common.css?2025032401">
 
 	<div class="wrap _pc">
 		<div class="view_wrap">
@@ -203,6 +225,7 @@
 			</div>
 		</div>
 	</div>
+
     <form id="writeForm" onsubmit="return false;">
     <!-- 모달 : 참여팝업 이벤트 -->
     <div id="dialog" class="dialog popup-lay">
@@ -357,7 +380,7 @@
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
-                                            <input type="text" name="userEmail" value="" id="userEmail" maxlength="150" placeholder="이메일을 입력해 주세요.">
+                                            <input type="text" id="f_user_mail" name="f_user_mail" value="" maxlength="150" placeholder="이메일을 입력해 주세요.">
                                         </div>
                                     </dd>
                                 </dl>
@@ -365,11 +388,11 @@
                                 <!-- 이메일추천인 닉네임/이름주소 -->
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="nickName" class="">추천인 닉네임/이름</label>
+                                        <label for="f_user_nicknane" class="">추천인 닉네임/이름</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
-                                            <input type="text" name="nickName" value="" id="nickName" maxlength="150" placeholder="닉네임/이름을 입력해 주세요(ex. LG찐팬/김엘지)">
+                                            <input type="text" id="f_user_nicknane" name="f_user_nicknane" value="" maxlength="150" placeholder="닉네임/이름을 입력해 주세요(ex. LG찐팬/김엘지)">
                                         </div>
                                          <ul class="bullet-list">
                                             <li class="b-txt">별도의 추천인이 없을 경우 ‘없음’으로 기입해주세요.</li>
@@ -415,11 +438,11 @@
                                     <dd class="conts">
                                         <div class="select-list-wrap">
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="serviceChk1-1" name="serviceChk-1" value="Y">
+                                                <input type="radio" id="serviceChk1-1" name="f_product_possession" value="1">
                                                 <label for="serviceChk1-1">예</label>
                                             </span>
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="serviceChk1-2" name="serviceChk-1" value="N">
+                                                <input type="radio" id="serviceChk1-2" name="f_product_possession" value="2">
                                                 <label for="serviceChk1-2">아니오</label>
                                             </span>
                                         </div>
@@ -427,22 +450,22 @@
                                 </dl>
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="saveProcut">보유하고 계신 LG전자 제품을 입력해주세요.<span class="txt-sm block">(복수 제품 입력 가능)</span></label>
+                                        <label for="f_product_appliances">보유하고 계신 LG전자 제품을 입력해주세요.<span class="txt-sm block">(복수 제품 입력 가능)</span></label>
                                     </dt>
                                     <dd class="noti">제품을 보유하고 있지 않은 경우 ‘없음’으로 기입해주세요.</dd>
                                     <dd class="conts">
                                         <div class="input-wrap count">
-                                            <input type="text" name="saveProcut" value=""  id="saveProcut"  maxlength="50" placeholder="예시) 그램, 스탠바이미GO, 워시타워, 스타일러, 식기세척기 등">
+                                            <input type="text" name="f_product_appliances" value=""  id="f_product_appliances"  maxlength="50" placeholder="예시) 그램, 스탠바이미GO, 워시타워, 스타일러, 식기세척기 등">
                                         </div>
                                     </dd>
                                 </dl>
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="lgReason">LG전자를 좋아하는 이유를 남겨주세요. <span class="txt-sm">(최대 100자)</span></label>
+                                        <label for="f_product_reason">LG전자를 좋아하는 이유를 남겨주세요. <span class="txt-sm">(최대 100자)</span></label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap h-size">
-                                            <textarea name="lgReason"  id="lgReason" class="" maxlength="100" placeholder=""></textarea>
+                                            <textarea name="f_product_reason"  id="f_product_reason" class="" maxlength="100" placeholder="내용을 입력해 주세요."></textarea>
                                         </div>
                                     </dd>
                                 </dl>
@@ -454,11 +477,11 @@
                                     <dd class="conts">
                                         <div class="select-list-wrap">
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="subscribeChk1-1" name="subscribeChk-1" value="Y">
+                                                <input type="radio" id="subscribeChk1-1" name="f_product_subscribe" value="1">
                                                 <label for="subscribeChk1-1">예</label>
                                             </span>
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="subscribeChk1-2" name="subscribeChk-1" value="N">
+                                                <input type="radio" id="subscribeChk1-2" name="f_product_subscribe" value="2">
                                                 <label for="subscribeChk1-2">아니오</label>
                                             </span>
                                         </div>
@@ -466,11 +489,11 @@
                                 </dl>
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="subscribeProduct">구독 중인 제품이 있을 시 제품명을 입력해주세요. <span class="txt-sm">(선택)</span></label>
+                                        <label for="f_product_appliances">구독 중인 제품이 있을 시 제품명을 입력해주세요. <span class="txt-sm">(선택)</span></label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap count">
-                                            <input type="text" name="saveProcut" value=""  id="saveProcut"  placeholder="예시) 정수기, 안마의자, 에어컨, 식기세척기 등">
+                                            <input type="text" name="f_product_appliances" value=""  id="f_product_appliances"  placeholder="예시) 정수기, 안마의자, 에어컨, 식기세척기 등">
                                         </div>
                                     </dd>
                                 </dl>
@@ -518,7 +541,7 @@
                                     <dd class="noti mg-left">사진 또는 이미지를 업로드해주세요.</dd>
                                     <dd class="noti mg-left">5MB 이하의 이미지 파일(jpg, jpeg, png, gif)만 등록 할 수 있습니다.</dd>
                                     <dd class="conts">
-                                        <d<iv class="upload-wrap">
+                                        <div class="upload-wrap">
                                             <div class="button-file-multi">
                                                 <label for="file-upload-input">
                                                     <picture class="img">
@@ -528,17 +551,17 @@
                                                 </label>
                                                 <input type="file" id="file-upload-input" name="file-upload-input" multiple />
                                             </div>
-                                            <div class="button-file-upload">
+                                            <!-- <div class="button-file-upload">
                                                 <a href="javascript:;" onclick="">
                                                     <picture class="img">
                                                         <source srcset="pc/images/button_upload.png" media="(min-width: 769px)">
                                                         <img src="mo/images/button_upload.png" alt="" />
                                                     </picture>
                                                 </a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <h3 class="blind">업로드된 파일</h3>
-                                        <d>iv id="upload-preview" class="upload-preview"></div>
+                                        <div id="upload-preview" class="upload-preview"></div>
                                     </dd>
                                 </dl>
                             </div>
@@ -584,11 +607,11 @@
                                     <dd class="conts">
                                         <div class="select-list-wrap">
                                             <span class="chk-wrap">
-                                                <input type="checkbox" id="serviceChk2-1" name="serviceChk2-1" value="">
+                                                <input type="checkbox" id="serviceChk2-1" name="f_main_platform" value="">
                                                 <label for="serviceChk2-1">인스타그램</label>
                                             </span>
                                             <span class="chk-wrap">
-                                                <input type="radio" id="serviceChk2-2" name="serviceChk2-2" value="">
+                                                <input type="radio" id="serviceChk2-2" name="f_main_platform" value="">
                                                 <label for="serviceChk2-2">유튜브</label>
                                             </span>
                                         </div>
@@ -596,12 +619,12 @@
                                 </dl>
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="instaUrl">인스타그램 계정 URL</label>
+                                        <label for="f_main_ig_url">인스타그램 계정 URL</label>
                                     </dt>
                                     <dd class="noti">인스타그램&유튜브 중 하나의 채널만 보유하고 있어도 지원 가능하나, 최종 선발 시 두 채널 모두 운영 필수</dd>
                                     <dd class="conts">
                                         <div class="input-wrap">
-                                            <input type="text" name="instaUrl" value=""  id="instaUrl" maxlength="4000" placeholder="인스타그램 계정의 URL을 정확히 입력해주세요.">
+                                            <input type="text" name="f_main_ig_url" value=""  id="f_main_ig_url" maxlength="50" placeholder="인스타그램 계정의 URL을 정확히 입력해주세요." disabled>
                                         </div>
                                     </dd>
                                 </dl>
@@ -614,37 +637,37 @@
                                             <ul class="list-wrap col2">
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="followChk1-1" name="followChk-1" value="followChk1" checked>
+                                                        <input type="radio" id="followChk1-1" name="f_main_ig_followers" value="1" disabled>
                                                         <label for="followChk1-1">500명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="followChk1-2" name="followChk-1" value="followChk2">
+                                                        <input type="radio" id="followChk1-2" name="f_main_ig_followers" value="2" disabled>
                                                         <label for="followChk1-2">500 명 이상 ~ 1천 명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="followChk1-3" name="followChk-1" value="followChk3">
+                                                        <input type="radio" id="followChk1-3" name="f_main_ig_followers" value="3" disabled>
                                                         <label for="followChk1-3">1천 명 이상 ~ 5천 명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="followChk1-4" name="followChk-1" value="followChk4">
+                                                        <input type="radio" id="followChk1-4" name="f_main_ig_followers" value="4" disabled>
                                                         <label for="followChk1-4">5천 명 이상 ~ 1만 명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="followChk1-5" name="followChk-1" value="followChk5">
+                                                        <input type="radio" id="followChk1-5" name="f_main_ig_followers" value="5" disabled>
                                                         <label for="followChk1-5">1만 명 이상</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="followChk1-6" name="followChk-1" value="followChk6">
+                                                        <input type="radio" id="followChk1-6" name="f_main_ig_followers" value="6" disabled>
                                                         <label for="followChk1-6">해당 없음</label>
                                                     </span>
                                                 </li>
@@ -655,11 +678,11 @@
 
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="ytUrl">유튜브 채널 URL</label>
+                                        <label for="f_main_yt_url">유튜브 채널 URL</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
-                                            <input type="text" name="ytUrl" value=""  id="ytUrl" maxlength="4000" placeholder="유튜브 채널의 URL을 정확히 입력해주세요.">
+                                            <input type="text" name="f_main_yt_url" value=""  id="f_main_yt_url" maxlength="50" placeholder="유튜브 채널의 URL을 정확히 입력해주세요." disabled>
                                         </div>
                                     </dd>
                                 </dl>
@@ -672,37 +695,37 @@
                                             <ul class="list-wrap col2">
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-1" name="ytFollowChk-1" value="ytFollowChk1" checked>
+                                                        <input type="radio" id="ytFollowChk1-1" name="f_main_yt_followers" value="1" checked>
                                                         <label for="ytFollowChk1-1">500명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-2" name="ytFollowChk-1" value="ytFollowChk2">
+                                                        <input type="radio" id="ytFollowChk1-2" name="f_main_yt_followers" value="2" disabled>
                                                         <label for="ytFollowChk1-2">500 명 이상 ~ 1천 명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-3" name="ytFollowChk-1" value="ytFollowChk3">
+                                                        <input type="radio" id="ytFollowChk1-3" name="f_main_yt_followers" value="2" disabled>
                                                         <label for="ytFollowChk1-3">1천 명 이상 ~ 5천 명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-4" name="ytFollowChk-1" value="ytFollowChk4">
+                                                        <input type="radio" id="ytFollowChk1-4" name="f_main_yt_followers" value="3" disabled>
                                                         <label for="ytFollowChk1-4">5천 명 이상 ~ 1만 명 미만</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-5" name="ytFollowChk-1" value="ytFollowChk5">
+                                                        <input type="radio" id="ytFollowChk1-5" name="f_main_yt_followers" value="4" disabled>
                                                         <label for="ytFollowChk1-5">1만 명 이상</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-6" name="ytFollowChk-1" value="ytFollowChk6">
+                                                        <input type="radio" id="ytFollowChk1-6" name="f_main_yt_followers" value="5" disabled>
                                                         <label for="ytFollowChk1-6">해당 없음</label>
                                                     </span>
                                                 </li>
@@ -720,71 +743,71 @@
                                             <ul class="list-wrap col3">
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-1" name="channelChk-1" value="channelChk1">
+                                                        <input type="checkbox" id="channelChk1-1" name="f_main_category" value="1">
                                                         <label for="channelChk1-1">패션/뷰티</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-2" name="channelChk-1" value="channelChk2">
+                                                        <input type="checkbox" id="channelChk1-2" name="f_main_category" value="2">
                                                         <label for="channelChk1-2">음악/댄스/공연</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-3" name="channelChk-1" value="channelChk3">
+                                                        <input type="checkbox" id="channelChk1-3" name="f_main_category" value="3">
                                                         <label for="channelChk1-3">일상기록</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-4" name="channelChk-1" value="channelChk4">
+                                                        <input type="checkbox" id="channelChk1-4" name="f_main_category" value="4">
                                                         <label for="channelChk1-4">여행/캠핑/아웃도어</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-5" name="channelChk-1" value="channelChk5">
+                                                        <input type="checkbox" id="channelChk1-5" name="f_main_category" value="5">
                                                         <label for="channelChk1-5">푸드/맛집/카페</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-6" name="channelChk-1" value="channelChk6">
+                                                        <input type="checkbox" id="channelChk1-6" name="f_main_category" value="6">
                                                         <label for="channelChk1-6">테크/IT</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-7" name="channelChk-1" value="channelChk7">
+                                                        <input type="checkbox" id="channelChk1-7" name="f_main_category" value="7">
                                                         <label for="channelChk1-7">인테리어/리빙</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-8" name="channelChk-1" value="channelChk8">
+                                                        <input type="checkbox" id="channelChk1-8" name="f_main_category" value="8">
                                                         <label for="channelChk1-8">상황극/유머</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-9" name="channelChk-1" value="channelChk9">
+                                                        <input type="checkbox" id="channelChk1-9" name="f_main_category" value="9">
                                                         <label for="channelChk1-9">육아/가족</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-10" name="channelChk-1" value="channelChk10">
+                                                        <input type="checkbox" id="channelChk1-10" name="f_main_category" value="10">
                                                         <label for="channelChk1-10">운동/건강</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists last-type">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="channelChk1-11" name="channelChk-1" value="channelChk11">
+                                                        <input type="checkbox" id="channelChk1-11" name="f_main_category" value="11">
                                                         <label for="channelChk1-11">기타</label>
                                                     </span>
                                                     <div class="input-wrap">
-                                                        <input type="text" id="channelChkEtc" name="channelChkEtc" data-required="true" placeholder="" maxlength="50">
+                                                        <input type="text" id="f_main_category_etc" name="f_main_category_etc" data-required="true" placeholder="" maxlength="10" disabled>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -794,11 +817,11 @@
 
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="conceptText">내 채널 컨셉에 대해 간단히 소개해주세요.(최대 50자)</label>
+                                        <label for="f_main_concept">내 채널 컨셉에 대해 간단히 소개해주세요.(최대 50자)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap count">
-                                            <textarea name="conceptText" data-required="true" id="conceptText" placeholder="내용을 입력해 주세요." maxlength="50"></textarea>
+                                            <textarea name="f_main_concept" data-required="true" id="f_main_concept" placeholder="내용을 입력해 주세요." maxlength="50"></textarea>
                                         </div>
                                     </dd>
                                 </dl>
@@ -810,17 +833,17 @@
                                     <dd class="conts">
                                         <div class="select-list-wrap">
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="hopeChk1-1" name="hopeChk-1" value="" checked>
+                                                <input type="radio" id="hopeChk1-1" name="f_main_part" value="1">
                                                 <label for="hopeChk1-1">아이디어 LAB 팀</label>
                                             </span>
                                         
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="hopeChk1-2" name="hopeChk-1" value="">
+                                                <input type="radio" id="hopeChk1-2" name="f_main_part" value="2">
                                                 <label for="hopeChk1-2">Gen Z 팀</label>
                                             </span>
                                         
                                             <span class="rdo-wrap">
-                                                <input type="radio" id="hopeChk1-3" name="hopeChk-1" value="">
+                                                <input type="radio" id="hopeChk1-3" name="f_main_part" value="3">
                                                 <label for="hopeChk1-3">라이프스타일 팀</label>
                                             </span>
                                            
@@ -874,23 +897,23 @@
                                             <ul class="list-wrap col2-re">
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="snsSubChk1-1" name="snsSubChk-1" value="snsSubChk1">
+                                                        <input type="radio" id="snsSubChk1-1" name="f_sub_platform" value="1">
                                                         <label for="snsSubChk1-1">틱톡</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="snsSubChk1-2" name="snsSubChk-1" value="snsSubChk2">
+                                                        <input type="radio" id="snsSubChk1-2" name="f_sub_platform" value="2">
                                                         <label for="snsSubChk1-2">스레드</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists last-type">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="snsSubChk1-3" name="snsSubChk-1" value="snsSubChk3">
+                                                        <input type="radio" id="snsSubChk1-3" name="f_sub_platform" value="3">
                                                         <label for="snsSubChk1-3">기타</label>
                                                     </span>
                                                     <div class="input-wrap">
-                                                        <input type="text" id="snsSubChkEtc" name="snsSubChkEtc" placeholder="ex. 블로그 등" maxlength="50">
+                                                        <input type="text" id="f_sub_platform_etc" name="f_sub_platform_etc" placeholder="ex. 블로그 등" maxlength="10">
                                                     </div>
                                                 </li>
                                             </ul>
@@ -900,11 +923,11 @@
                                 </dl>
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="snsSubUrl">서브 계정 URL(선택)</label>
+                                        <label for="f_sub_url">서브 계정 URL(선택)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
-                                            <input type="text" name="snsSubUrl" value=""  id="snsSubUrl" maxlength="4000" placeholder="서브 SNS 채널의 URL을 정확히 입력해주세요.">
+                                            <input type="text" name="f_sub_url" value=""  id="f_sub_url" maxlength="50" placeholder="서브 SNS 채널의 URL을 정확히 입력해주세요.">
                                         </div>
                                     </dd>
                                 </dl>
@@ -917,47 +940,47 @@
                                             <ul class="list-wrap col3">
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-1" name="rootType-1" value="rootType1">
+                                                        <input type="checkbox" id="rootType1-1" name="f_sub_course" value="1">
                                                         <label for="rootType1-1">인스타그램 광고</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-2" name="rootType-1" value="rootType2">
+                                                        <input type="checkbox" id="rootType1-2" name="f_sub_course" value="2">
                                                         <label for="rootType1-2">유튜브 광고</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-3" name="rootType-1" value="rootType3">
+                                                        <input type="checkbox" id="rootType1-3" name="f_sub_course" value="3">
                                                         <label for="rootType1-3">기타 광고</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-4" name="rootType-1" value="rootType4">
+                                                        <input type="checkbox" id="rootType1-4" name="f_sub_course" value="4">
                                                         <label for="rootType1-4">지인 추천</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-5" name="rootType-1" value="rootType5">
+                                                        <input type="checkbox" id="rootType1-5" name="f_sub_course" value="5">
                                                         <label for="rootType1-5">대외활동 사이트</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-6" name="rootType-1" value="rootType6">
+                                                        <input type="checkbox" id="rootType1-6" name="f_sub_course" value="6">
                                                         <label for="rootType1-6">인터넷 검색</label>
                                                     </span>
                                                 </li>
                                                 <li class="lists last-type">
                                                     <span class="chk-wrap">
-                                                        <input type="checkbox" id="rootType1-7" name="rootType-1" value="rootType7">
+                                                        <input type="checkbox" id="rootType1-7" name="f_sub_course" value="7">
                                                         <label for="rootType1-7">기타</label>
                                                     </span>
                                                     <div class="input-wrap">
-                                                        <input type="text" id="rootTypeEtc" name="rootTypeEtc" data-required="true" placeholder="" maxlength="50">
+                                                        <input type="text" id="f_sub_course_etc" name="f_sub_course_etc" data-required="true" placeholder="" maxlength="10" disabled>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -1042,6 +1065,7 @@
         </div>
     </div>
 </form>
+
     <!-- 모달 : 알럿 -->
     <div id="dialog2" class="dialog popup-lay">
         <div class="popup-container">
@@ -1397,6 +1421,12 @@
                             //  $("#f_user_mail").focus();
                             return;
                         } 
+                        if( !isValidEmail($("#f_user_nicknane").val()) ) {
+                            jsErrorMessagePrint("닉네임을 정확하게 입력해 주세요");
+                            //  $("#f_user_nicknane").focus();
+                            return;
+                        } 
+                        
                         console.log("pop-info2");
                         break;
                     case "pop-info3":
