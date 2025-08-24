@@ -346,7 +346,7 @@
                                         <label for="f_user_name" class="">이름</label>
                                     </dt>
                                     <dd class="conts">
-                                        <span class="input-wrap"><input type="text" class="disabled" id="f_user_name" name="f_user_name" value="" placeholder="이름을 입력해 주세요."></span>
+                                        <span class="input-wrap"><input type="text" class="disabled" id="f_user_name" name="f_user_name" value="" placeholder="이름을 입력해 주세요." maxlength="50"></span>
                                     </dd>
                                 </dl>
                                 <!-- 휴대전화번호 -->
@@ -1421,11 +1421,11 @@
                             //  $("#f_user_mail").focus();
                             return;
                         } 
-                        if( !isValidEmail($("#f_user_nicknane").val()) ) {
+                        if( $("#f_user_nicknane").val() == "") {
                             jsErrorMessagePrint("닉네임을 정확하게 입력해 주세요");
-                            //  $("#f_user_nicknane").focus();
+                            //  $("#f_user_mail").focus();
                             return;
-                        } 
+                        }
                         
                         console.log("pop-info2");
                         break;
