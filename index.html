@@ -180,7 +180,7 @@
                             <img src="mo/images/sec_07.png" alt="">
                         </picture>
                     </div>
-                    <button class="button-apply" onclick="modal('dialog')"><span class="blind">LG전자 앰버서더 지원하기</span></button>
+                    <button class="button-apply" onClick="initForm();"><span class="blind">LG전자 앰버서더 지원하기</span></button>
 				</div>
 
                 <div class="section sec_9" id="sec9">
@@ -203,7 +203,7 @@
 			</div>
 		</div>
 	</div>
-
+    <form id="writeForm" onsubmit="return false;">
     <!-- 모달 : 참여팝업 이벤트 -->
     <div id="dialog" class="dialog popup-lay">
         <div class="popup-container">
@@ -251,11 +251,11 @@
 
                             <div class="agree-input">
                                 <span class="rdo-wrap">
-                                    <input type="radio" id="chk1-1" name="agreechk-1">
+                                    <input type="radio" id="chk1-1" name="agreechk-1" value="1">
                                     <label for="chk1-1">동의합니다</label>
                                 </span>
                                 <span class="rdo-wrap">
-                                    <input type="radio" id="chk1-2" name="agreechk-1">
+                                    <input type="radio" id="chk1-2" name="agreechk-1" value="2">
                                     <label for="chk1-2">동의하지 않습니다</label>
                                 </span>
                             </div>
@@ -293,7 +293,7 @@
                             </div>
                             <div class="agree-input">
                                 <span class="chk-wrap">
-                                    <input type="checkbox" id="chk2" name="agreechk-2">
+                                    <input type="checkbox" id="chk2" name="agreechk-2" value="Y">
                                     <label for="chk2">유의사항을 모두 확인했습니다</label>
                                 </span>
                             </div>
@@ -320,20 +320,20 @@
                                 <!-- 이름 -->
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="buyerName" class="">이름</label>
+                                        <label for="f_user_name" class="">이름</label>
                                     </dt>
                                     <dd class="conts">
-                                        <span class="input-wrap"><input type="text" class="disabled" name="buyerName" value="" placeholder="이름을 입력해 주세요." readonly></span>
+                                        <span class="input-wrap"><input type="text" class="disabled" id="f_user_name" name="f_user_name" value="" placeholder="이름을 입력해 주세요."></span>
                                     </dd>
                                 </dl>
                                 <!-- 휴대전화번호 -->
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="buyerPhone" class="">휴대전화번호</label>
+                                        <label for="f_user_phone" class="">휴대전화번호</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
-                                            <input type="number" class="disabled" name="buyerPhone" data-required="true" id="buyerPhone" value="" placeholder="휴대전화번호를 입력해 주세요." readonly>
+                                            <input type="number" class="disabled" data-required="true" id="f_user_phone" name="f_user_phone" value="" placeholder="휴대전화번호를 입력해 주세요." maxLength="11" oninput="maxLengthCheck(this)">
                                         </div>
                                         <ul class="bullet-list">
                                             <li class="b-txt">회원가입 시 입력된 휴대전화 번호로 참여되며, 당첨 정보는 참여하신 휴대전화 번호로 발송됩니다.</li>
@@ -344,10 +344,10 @@
                                 <!-- 생년월일 -->
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="birthDayChk" class="">생년월일</label>
+                                        <label for="f_user_birth" class="">생년월일</label>
                                     </dt>
                                     <dd class="conts">
-                                        <span class="input-wrap"><input type="tel" class="" name="birthDayChk" value="" placeholder="생년월일 8자리를 입력해 주세요.(ex. 19990101)" maxlength="8"></span>
+                                        <span class="input-wrap"><input type="tel" class="" id="f_user_birth" name="f_user_birth" value="" placeholder="생년월일 8자리를 입력해 주세요.(ex. 19990101)" maxlength="8" oninput="maxLengthCheck(this)"></span>
                                     </dd>
                                 </dl>
                                 <!-- 이메일주소 -->
@@ -518,29 +518,27 @@
                                     <dd class="noti mg-left">사진 또는 이미지를 업로드해주세요.</dd>
                                     <dd class="noti mg-left">5MB 이하의 이미지 파일(jpg, jpeg, png, gif)만 등록 할 수 있습니다.</dd>
                                     <dd class="conts">
-                                        <form>
-                                            <div class="upload-wrap">
-                                                <div class="button-file-multi">
-                                                    <label for="file-upload-input">
-                                                        <picture class="img">
-                                                            <source srcset="pc/images/button_file_select.png" media="(min-width: 769px)">
-                                                            <img src="mo/images/button_file_select.png" alt="" />
-                                                        </picture>
-                                                    </label>
-                                                    <input type="file" id="file-upload-input" name="file-upload-input" multiple />
-                                                </div>
-                                                <div class="button-file-upload">
-                                                    <a href="javascript:;" onclick="">
-                                                        <picture class="img">
-                                                            <source srcset="pc/images/button_upload.png" media="(min-width: 769px)">
-                                                            <img src="mo/images/button_upload.png" alt="" />
-                                                        </picture>
-                                                    </a>
-                                                </div>
+                                        <d<iv class="upload-wrap">
+                                            <div class="button-file-multi">
+                                                <label for="file-upload-input">
+                                                    <picture class="img">
+                                                        <source srcset="pc/images/button_file_select.png" media="(min-width: 769px)">
+                                                        <img src="mo/images/button_file_select.png" alt="" />
+                                                    </picture>
+                                                </label>
+                                                <input type="file" id="file-upload-input" name="file-upload-input" multiple />
                                             </div>
-                                            <h3 class="blind">업로드된 파일</h3>
-                                            <div id="upload-preview" class="upload-preview"></div>
-                                        </form>
+                                            <div class="button-file-upload">
+                                                <a href="javascript:;" onclick="">
+                                                    <picture class="img">
+                                                        <source srcset="pc/images/button_upload.png" media="(min-width: 769px)">
+                                                        <img src="mo/images/button_upload.png" alt="" />
+                                                    </picture>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="blind">업로드된 파일</h3>
+                                        <d>iv id="upload-preview" class="upload-preview"></div>
                                     </dd>
                                 </dl>
                             </div>
@@ -978,7 +976,7 @@
                                     </a>
                                 </div>
                                 <div class="btn-item">
-                                    <a href="javascript:;" id="button-next7">
+                                    <a href="javascript:;" id="button-next6">
                                         <picture class="img">
                                             <source srcset="pc/images/button_submit.png" media="(min-width: 769px)">
                                             <img src="mo/images/button_submit.png" alt="" />
@@ -1013,7 +1011,7 @@
                                 </div>
                                 <div class="btn-item">
                                     <!-- <a href="javascript:;" onClick="modal('dialog2')"> -->
-                                    <a href="javascript:;" id="button-next8">
+                                    <a href="javascript:;" id="button-next7">
                                         <picture class="img">
                                             <source srcset="pc/images/button_submit.png" media="(min-width: 769px)">
                                             <img src="mo/images/button_submit.png" alt="" />
@@ -1043,7 +1041,7 @@
             </div>
         </div>
     </div>
-
+</form>
     <!-- 모달 : 알럿 -->
     <div id="dialog2" class="dialog popup-lay">
         <div class="popup-container">
@@ -1055,7 +1053,7 @@
                         <main>
                             <div class="submit-done-box mgt30">
                                 <i class="icon-info-submit"></i>
-                                <div class="txt-msg"><span class="dot">현재 ‘LG전자 가전 구독’ 서비스를 이용 중이신가요?</span></div>
+                                <div class="txt-msg"><span class="dot" id="errorMessage">현재 ‘LG전자 가전 구독’ 서비스를 이용 중이신가요?</span></div>
                             </div>
                             <!-- 버튼 -->
                             <div class="button-wrap">
@@ -1229,7 +1227,18 @@
             modal.fadeOut();
         });
 
+        function initForm() {
+            dataTransfer.clearData();
+            $("#writeForm")[0].reset();
+            $(".info-cont-wrap").removeClass("active");
+            $("#pop-info1").addClass("active");
+            $("#pop-info8").addClass("active");
+            $("#upload-preview").html("");
+            $("#upload-preview").removeClass("active");
+            modal('dialog');
+        }
 
+        var dataTransfer = new DataTransfer();
         // 파일선택
         const handler = {
             init() {
@@ -1239,15 +1248,62 @@
                 fileInput.addEventListener('change', () => {  
                     const files = Array.from(fileInput.files);
 
+                    if(files.length > 10) {
+                        jsErrorMessagePrint("사진은 최대 10장까지만 가능합니다.");
+                        return;
+                    }
+
+                    let arrayErrorFileInfo = new Array();
+                    let errorMessage = "";
+                    let filesize = 0;
+
                     // 기존 내용 초기화 후 파일 추가
-                    preview.innerHTML = "";  
+                    // preview.innerHTML = "";  
                     files.forEach(file => {
-                        preview.innerHTML += `
-                        <p id="${file.lastModified}">
-                            ${file.name}
-                            <button data-index='${file.lastModified}' class='file-remove'>X</button>
-                        </p>`;
+                        if(file.size > 1024*1024*10) {
+                            filesize = (file.size / 1024 / 1024).toFixed(2);
+
+                            arrayErrorFileInfo.push({"name":file.name, "size":filesize });
+                        } else {
+                            let fileVal = file.name;
+                            let ext = fileVal.split('.').pop().toLowerCase();
+                            let randomValue = 0;
+                            if($.inArray(ext, ['jpg','jpeg','gif','png']) != -1) {
+                                if( dataTransfer.items.length < 10) {
+                                    dataTransfer.items.add(file);
+
+                                    preview.innerHTML += `
+                                    <p id="${file.lastModified}">
+                                        ${file.name}
+                                        <button data-index='${file.lastModified}' class='file-remove'>X</button>
+                                    </p>`;
+                                } else {
+                                    jsErrorMessagePrint("사진은 최대 10장까지만 가능합니다.");                                
+                                }
+                            } else {
+                                jsErrorMessagePrint("이미지 파일(jpg, jpeg, png, gif)만 등록 할 수 있습니다");                                
+                            }
+                        }
                     });
+
+                    if( arrayErrorFileInfo.length > 0 ) {
+                        // errorMessage = "[용량초과 안내]\n\n";
+                        // errorMessage += "첨부 용량이 초과되어 업로드 하실 수 없습니다.\n";
+                        // errorMessage += "첨부하시고자 하는 파일의 전체 용량을 확인해 주세요.\n";
+                        // errorMessage += "(※ 각 첨부 파일의용량은 10MB를 넘을 수 없습니다.)\n\n";
+                        // arrayErrorFileInfo.forEach(errorFileInfo =>{
+                        //     errorMessage = errorMessage + errorFileInfo.name + "(" + errorFileInfo.size + "MB)\n";
+                        // });
+                        // alert(errorMessage);
+                        errorMessage = "첨부 용량이 초과되어 업로드 하실 수 없습니다.<br>";
+                        errorMessage += "첨부하시고자 하는 파일의 전체 용량을 확인해 주세요.<br>";
+                        errorMessage += "(※ 각 첨부 파일의용량은 10MB를 넘을 수 없습니다.)<br><br>";
+                        arrayErrorFileInfo.forEach(errorFileInfo =>{
+                            errorMessage = errorMessage + errorFileInfo.name + "(" + errorFileInfo.size + "MB)<br>";
+                        });
+                        jsErrorMessagePrint(errorMessage);
+                        // alert(errorMessage);
+                    }
 
                     // 파일이 존재하면 스타일 추가, 없으면 제거
                     if (files.length > 0) {
@@ -1267,15 +1323,16 @@
                     const fileInput = document.querySelector('#file-upload-input');
                     const preview = document.querySelector('#upload-preview');
                     const files = fileInput.files;
-                    const dataTransfer = new DataTransfer();
+                    let dataTransferTmp = new DataTransfer();
 
-                    Array.from(files)
+                    Array.from(dataTransfer.files)
                         .filter(file => file.lastModified != removeTargetId)
                         .forEach(file => {
-                            dataTransfer.items.add(file);
+                            dataTransferTmp.items.add(file);
                         });
 
-                    fileInput.files = dataTransfer.files;
+                    dataTransfer.clearData();
+                    dataTransfer = dataTransferTmp;
                     removeTarget.remove();
 
                     // 모든 파일이 삭제되었을 경우 스타일 제거
@@ -1453,8 +1510,12 @@
                         }
                         break;
                     case "pop-info7":
-                        jsFormSubmit();
                         console.log("pop-info7");
+                        return;
+                        break;
+                    case "pop-info8":
+                        jsFormSubmit();
+                        console.log("pop-info8");
                         return;
                         break;
                     default :
@@ -1472,6 +1533,124 @@
                 }
             });
         });
+
+        function jsErrorMessagePrint(strMessage) {
+            if(strMessage) {
+                $("#errorMessage").html(strMessage);
+                modal('dialog2');
+            }
+        }
+
+        function maxLengthCheck(object){
+            if (object.value.length > object.maxLength){
+                object.value = object.value.slice(0, object.maxLength);
+            }
+        }
+        function isValidEmail(email) {
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        $('input[name="f_main_category"]').change(function() {
+            if($('input[name="f_main_category"]:checked').length > 2) {
+                $(this).prop('checked', false);
+                return;
+            }
+
+            $("#f_main_category_etc").attr("disabled", true);
+            $('input[name="f_main_category"]:checked').each(function() {
+                if($(this).val() == 11) {
+                    $("#f_main_category_etc").attr("disabled", false);
+                }
+            });
+        });
+
+        $('input[name="f_sub_course"]').change(function() {
+            $("#f_sub_course_etc").attr("disabled", true);
+            $('input[name="f_sub_course"]:checked').each(function() {
+                if($(this).val() == 7) {
+                    $("#f_sub_course_etc").attr("disabled", false);
+                }
+            });
+        });
+
+        $('#serviceChk2-1').change(function() {
+            let serviceChk2_1 = $("#serviceChk2-1").is(":checked");
+            if(serviceChk2_1) {
+                $("#f_main_ig_url").attr("disabled", false);
+                $("input:radio[name='f_main_ig_followers']").attr("disabled",false);
+            } else {
+                $("#f_main_ig_url").attr("disabled", true);
+                $("input:radio[name='f_main_ig_followers']").attr("disabled",true);
+            }
+        });
+
+        $('#serviceChk2-2').change(function() {
+            let serviceChk2_2 = $("#serviceChk2-2").is(":checked");
+            if(serviceChk2_2) {
+                $("#f_main_yt_url").attr("disabled", false);
+                $("input:radio[name='f_main_yt_followers']").attr("disabled",false);
+            } else {
+                $("#f_main_yt_url").attr("disabled", true);
+                $("input:radio[name='f_main_yt_followers']").attr("disabled",true);
+            }
+        });
+
+        $(document).on("keyup", "#f_user_phone", function() {
+            $(this).val($(this).val().replace(/[^0-9]/g, ''));
+        });
+        $(document).on("keyup", "#f_user_birth", function() {
+            $(this).val($(this).val().replace(/[^0-9]/g, ''));
+        });
+
+        function jsFormSubmit() {
+            const formData = new FormData(writeForm);
+            for (let i = 0; i < dataTransfer.files.length; i++) {
+                formData.append("f_product_file[]", dataTransfer.files[i]);
+            }
+            
+            $('input[name="f_main_platform"]:checked').each(function() {
+                formData.append("f_main_platform[]", $(this).val());
+            });
+            
+            $('input[name="f_main_category"]:checked').each(function() {
+                formData.append("f_main_category[]", $(this).val());
+            });
+            
+            $('input[name="f_sub_course"]:checked').each(function() {
+                formData.append("f_sub_course[]", $(this).val());
+            });
+
+            $(".overlay_t").show();
+            document.body.style= 'overflow: hidden';
+        //     $.ajax({
+        //         cache: false,
+        //         url: "./ajax.html",
+        //         type: 'POST',
+        //         processData: false,
+        //         contentType: false,
+        //         data: formData,
+        //         dataType: "json",
+        //         success: function (data) {
+        //             console.log(data);
+        //             $(".overlay_t").hide();
+        //             document.body.style= 'overflow: visible';
+        //             $(".dialog").fadeOut();
+        //             jsErrorMessagePrint("제출이 완료되었습니다.");
+        //         },error : function(error) {
+        //             console.log('오류가 발생했습니다. 다시 시도해주세요.');
+        //             $(".overlay_t").hide();
+        //             document.body.style= 'overflow: visible';
+        //             $(".dialog").fadeOut();
+        //         },complete : function() {
+        // //			console.log("complete!");
+        //         }
+        //     });
+            $(".overlay_t").hide();
+            document.body.style= 'overflow: visible';
+            $(".dialog").fadeOut();
+            jsErrorMessagePrint("제출이 완료되었습니다.");
+        }
 
         // 이전 버튼 클릭 시
         document.querySelectorAll('[id^="button-prev"]').forEach(button => {
