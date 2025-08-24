@@ -1262,7 +1262,7 @@
             button.addEventListener('click', function () {
                 const currentSection = button.closest('.info-cont-wrap'); // 현재 클릭한 버튼이 속한 section
                 const nextSection = currentSection.nextElementSibling; // 다음 section
-
+console.log(currentSection.id);
                 switch(currentSection.id) {                    
                     case "pop-info1":
                         if( !$("#chk1-1").is(":checked") ) {
