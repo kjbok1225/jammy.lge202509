@@ -224,7 +224,7 @@
         padding-left: 30px;
         .tit {
             font-weight: 700;
-            @include fluid-font(14, 30)
+            @include fluid-font(14, 30);
         }
         .sub {
             margin-top: 10px;
@@ -677,6 +677,7 @@
         padding-bottom: 12px;
         font-size: 16px;
         @include fluid-font(11,22);
+        &.mgt { margin-top: 25px;}
     }
     .agree-txt {
         li {

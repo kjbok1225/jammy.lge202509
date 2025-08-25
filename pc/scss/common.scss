@@ -17,7 +17,8 @@ html {width:100%; height:100%; /*overflow-y:scroll;*/ -webkit-tap-highlight-colo
 body {position:relative; width:100%; height:100%; margin:0; padding:0; background:#fff; font-size:1em; font-family:"Pretendard Variable", Pretendard,'맑은 고딕','Malgun Gothic','Nanum Gothic',NanumGothic,나눔고딕,돋움,dotum,'Apple SD Gothic Neo',AppleGotihc,'Helvetica Neue',Helvetica,Arial,sans-serif; -webkit-text-size-adjust:none;}
 
 
-// button{background: rgba(0, 0, 0, 0.5);}
+// .btn-wraps a,
+// .button-apply {background: rgba(0, 0, 0, 0.5);}
 
 .blind {
     position: absolute;
@@ -183,7 +184,7 @@ $factor: calc($bg-w / $crop-w); // 1.627118...
 }
 
 .ambassdor-ani {
-    max-width: 768px;
+    // max-width: 768px;
     margin: 0 auto;
 
     .video-container {
@@ -191,8 +192,8 @@ $factor: calc($bg-w / $crop-w); // 1.627118...
         width: 100%;
         height: 0;
         max-width: 1920px;
-        max-height: 2410px;
-        padding-top: 125.52%;
+        max-height: 1080px;
+        padding-top: 56.25%;
         overflow: hidden;
 
         video {
@@ -275,6 +276,48 @@ $factor: calc($bg-w / $crop-w); // 1.627118...
     left: 0; right: 0;
     display: flex;
     justify-content: center;
+    .video-cont {
+        position: relative;
+        width: 100%;
+        max-width: 1180px;
+        height: 390px;
+        overflow: hidden;
+        background-color: #fff
+        video {
+            position: absolute;
+            top: 0; 
+            left: 50%;
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            object-position: center;
+            background-color: #fff
+        }
+        &:before {
+            content:'';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 10px;
+            background:#fff;
+
+        }
+        @media (max-width: 1180px) {
+            max-width: 100%;
+            height: auto;
+            #fan-video-pc {
+                max-width: 100%;
+                // width: calc(100vw * 583 / 1180); // 비율 유지
+                height: calc(100vw * 390 / 1180); // 비율 유지
+            }
+            #fan-video-mo {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
 
     .video-container {
         position: relative;
@@ -323,6 +366,8 @@ $factor: calc($bg-w / $crop-w); // 1.627118...
         bottom: calc(100vw * 644 / 1180);
         width: calc(100vw * 512 / 1180);
         height: calc(100vw * 86 / 1180);
+        max-width: 512px;
+        max-height: 86px;
         z-index: 10;
         transform: translateX(-50%);
 
@@ -354,7 +399,9 @@ $factor: calc($bg-w / $crop-w); // 1.627118...
         .button-share {
             width: calc(100vw * 512 / 1180);
             height: calc(100vw * 86 / 1180);
-            margin-top: calc(100vw * 14 / 1180);
+            margin-top: min(calc(100vw * 14 / 1180), 14px);
+            max-width: 512px;
+            max-height: 86px;
         }
         @media only screen and (max-width: 767px) {
             bottom: calc(100vw * 239 / 1125);
@@ -372,9 +419,12 @@ $factor: calc($bg-w / $crop-w); // 1.627118...
     .button-apply {
         position: absolute;
         left: 50%;
+        display: block;
         bottom: calc(100vw * 166 / 1180);
         width: calc(100vw * 512 / 1180);
         height: calc(100vw * 86 / 1180);
+        max-width: 512px;
+        max-height: 86px;
         z-index: 10;
         transform: translateX(-50%);
 

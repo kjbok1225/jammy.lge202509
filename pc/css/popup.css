@@ -818,6 +818,9 @@
     font-size: 22px;
   }
 }
+.agree-list-notice .tit.mgt {
+  margin-top: 25px;
+}
 .agree-list-notice .agree-txt li {
   position: relative;
   padding-left: 20px;
