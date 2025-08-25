@@ -11,10 +11,8 @@
     <meta name="keywords" content="그램후기, 그램프로후기, 스탠바이미후기,스탠마이미고후기, 스타일러후기, 울트라게이밍모니터후기, 시네빔큐브후기">
 
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="128x128"
-          href="https://jammy.lge.co.kr/assets/common/img/favicon/jammy_favicon_128x128_b.png">
-    <link rel="icon" type="image/png" sizes="128x128"
-          href="https://jammy.lge.co.kr/assets/common/img/favicon//jammy_favicon_128x128_a.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="https://jammy.lge.co.kr/assets/common/img/favicon/jammy_favicon_128x128_b.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://jammy.lge.co.kr/assets/common/img/favicon//jammy_favicon_128x128_a.png">
 
     <meta property='og:title' content='나만의 경험 놀이터! | Jammy'/>
     <meta property='og:description' content='세상의 모든 제품 경험, Jammy에서 나눠볼까요? 그램, 스탠바이미, 스타일러'/>
@@ -32,6 +30,7 @@
 
 
     <script src="https://jammy.lge.co.kr/assets/common/script/jquery.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.js"></script>
 
 </head>
 
@@ -473,7 +472,7 @@
                                     <dt class="tit">
                                         <label for="subscribeChk1-1">현재 ‘LG전자 가전 구독’ 서비스를 이용 중이신가요?</label>
                                     </dt>
-                                    <dd class="noti">’LG전자 가전 구독’이란? 원하는 가전에 편리한 케어 서비스까지 고객의 생활에 맞춰 자유롭게 선택할 수 있는 LG전자만의 라이프 맞춤 구독 서비스 입니다.</dd>
+                                    <dd class="noti">‘LG전자 가전 구독’이란? 원하는 가전에 편리한 케어 서비스까지 고객의 생활에 맞춰 자유롭게 선택할 수 있는 LG전자만의 라이프 맞춤 구독 서비스 입니다.</dd>
                                     <dd class="conts">
                                         <div class="select-list-wrap">
                                             <span class="rdo-wrap">
@@ -846,7 +845,7 @@
                                                 <input type="radio" id="hopeChk1-3" name="f_main_part" value="3">
                                                 <label for="hopeChk1-3">라이프스타일 팀</label>
                                             </span>
-                                           
+
                                         </div>
                                     </dd>
                                     <dd class="noti">운영에 참고를 위한 문항이며, 희망 부문과는 다르게 배치될 수 있습니다.</dd>
@@ -1109,9 +1108,9 @@
                         </header>
                         <main>
                            <ul class="sns-list">
-                                <li><a href="javascript:;" class="kakao"><i></i><span>카카오톡</span></a></li> 
-                                <li><a href="javascript:;" class="facebook"><i></i><span>페이스북</span></a></li> 
-                                <li><a href="javascript:;" class="clipboard"><i></i><span>URL복사</span></a></li> 
+                                <li><a href="javascript:fn_kakao_share();" class="kakao"><i></i><span>카카오톡</span></a></li> 
+                                <li><a href="javascript:fn_f_share_link();" class="facebook"><i></i><span>페이스북</span></a></li> 
+                                <li><a href="javascript:fn_link_share();" class="clipboard"><i></i><span>URL복사</span></a></li> 
                             </ul>
                         </main>
                     </section>
@@ -1428,8 +1427,6 @@
                             //  $("#f_user_mail").focus();
                             return;
                         }
-                        
-                        console.log("pop-info2");
                         break;
                     case "pop-info3":
                             
@@ -1694,6 +1691,47 @@
                 }
             });
         });
+        
+        function fn_f_share_link()
+        {
+            let url = window.location.href;
+            window.open("https://www.facebook.com/sharer/sharer.php?u=" + url);
+        }
+        function fn_link_share()
+        {
+            let url = window.location.href;
+            navigator.clipboard.writeText(url).then(function() {
+                jsErrorMessagePrint("URL이 복사되었습니다.");
+            }, function(err) {
+                jsErrorMessagePrint("URL 복사에 실패하였습니다. 다시 시도해 주세요.");
+            });
+        }
+
+        Kakao.init('387b71034f8670706ad59ce95ed78778');
+        function fn_kakao_share() {
+            let url = window.location.href;
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: 'LG전자 앰버서더 3기 모집',
+                    description: '일상을 특별하게, 나답게! LG전자와 함께할 앰버서더 3기를 모집합니다.',
+                    imageUrl: 'https://jammy.lge.co.kr/assets/common/img/common/ogimage-800.jpg',
+                    link: {
+                        mobileWebUrl: url,
+                        webUrl: url
+                    }
+                },
+                buttons: [
+                    {
+                        title: '앰버서더 3기 지원하기',
+                        link: {
+                            mobileWebUrl: url,
+                            webUrl: url
+                        }
+                    }
+                ]
+            });
+        }
     </script>
 
 </body>
