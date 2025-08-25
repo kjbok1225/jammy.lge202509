@@ -1710,6 +1710,7 @@
         Kakao.init('387b71034f8670706ad59ce95ed78778');
         function fn_kakao_share() {
             let url = window.location.href;
+            console.log(url);
             Kakao.Link.sendDefault({
                 objectType: 'feed',
                 content: {
