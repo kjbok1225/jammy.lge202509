@@ -147,7 +147,7 @@
                             <img src="mo/images/sec_04.png" alt="">
                         </picture>
                     </div>
-                    <button class="button-apply" onClick="modal('dialog')"><span class="blind">LG전자 앰버서더 지원하기</span></button>
+                    <button class="button-apply" onClick="initForm();"><span class="blind">LG전자 앰버서더 지원하기</span></button>
 				</div>
 
 				<div class="section sec_6 _fixed_content" id="sec6">
@@ -189,7 +189,7 @@
                     </div>
 
                     <div class="btn-wraps">
-                        <button class="button-report" onClick=""><span class="blind">찐팬 제보하기</span></button>
+                        <button class="button-report" onClick="location.href='https://docs.google.com/'"><span class="blind">찐팬 제보하기</span></button>
                         <button class="button-share" onClick="modal('dialog3')"><span class="blind">내 주변 찐팬에게 공유하기</span></button>
                     </div>
 				</div>
@@ -1699,6 +1699,7 @@
         }
         function fn_link_share()
         {
+            $('#dialog3').fadeOut();
             let url = window.location.href;
             navigator.clipboard.writeText(url).then(function() {
                 jsErrorMessagePrint("URL이 복사되었습니다.");
@@ -1710,7 +1711,6 @@
         Kakao.init('387b71034f8670706ad59ce95ed78778');
         function fn_kakao_share() {
             let url = window.location.href;
-            console.log(url);
             Kakao.Link.sendDefault({
                 objectType: 'feed',
                 content: {
