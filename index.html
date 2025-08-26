@@ -137,7 +137,7 @@
                         </picture>
                     </div>
 
-				</div>				
+				</div>
 
 				<div class="section sec_5" id="sec5">
 					<div class="layout">
@@ -277,12 +277,12 @@
                                 <h2 class="h2-tit">※ 유의사항 확인</h2>
                             </div>
 
-                            
+
 
                             <div class="agree-list-notice">
                                 <div class="tit">&lt;LG전자 앰버서더 3기 모집!&gt;이벤트 참여 및 활동 유의사항</div>
                                 <ul class="agree-txt">
-                                    <li>LG전자 앰버서더 선정, 발표 및 운영 활동은 당사 사정에 따라 별도의 고지 없이 변경 또는 중단될 수 있습니다.</li>                            
+                                    <li>LG전자 앰버서더 선정, 발표 및 운영 활동은 당사 사정에 따라 별도의 고지 없이 변경 또는 중단될 수 있습니다.</li>
                                     <li>본 이벤트는 Jammy 회원가입 및 로그인 후 참여 가능하며, 이벤트 참여 후 Jammy 회원 탈퇴 시 선정이 취소될 수 있습니다.</li>
                                     <li>만 19세 미만 고객님의 경우 LG전자 앰버서더 지원이 불가합니다.</li>
                                     <li>타인의 명의 도용 등 비정상적이거나 불법적인 방법으로 참여하신 경우 LG전자 앰버서더 선정이 취소될 수 있습니다.</li>
@@ -603,7 +603,7 @@
                             <div class="form-wrap">
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="serviceChk2-1">활동 중인 SNS 채널을 모두 선택해주세요. (복수 응답 가능)</label>
+                                        <label for="">활동 중인 SNS 채널을 모두 선택해주세요. (복수 응답 가능)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="select-list-wrap">
@@ -696,7 +696,7 @@
                                             <ul class="list-wrap col2">
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-1" name="f_main_yt_followers" value="1" checked>
+                                                        <input type="radio" id="ytFollowChk1-1" name="f_main_yt_followers" value="1" disabled>
                                                         <label for="ytFollowChk1-1">500명 미만</label>
                                                     </span>
                                                 </li>
@@ -837,12 +837,12 @@
                                                 <input type="radio" id="hopeChk1-1" name="f_main_part" value="1">
                                                 <label for="hopeChk1-1">아이디어 LAB 팀</label>
                                             </span>
-                                        
+
                                             <span class="rdo-wrap">
                                                 <input type="radio" id="hopeChk1-2" name="f_main_part" value="2">
                                                 <label for="hopeChk1-2">Gen Z 팀</label>
                                             </span>
-                                        
+
                                             <span class="rdo-wrap">
                                                 <input type="radio" id="hopeChk1-3" name="f_main_part" value="3">
                                                 <label for="hopeChk1-3">라이프스타일 팀</label>
@@ -852,7 +852,7 @@
                                     </dd>
                                     <dd class="noti">운영에 참고를 위한 문항이며, 희망 부문과는 다르게 배치될 수 있습니다.</dd>
                                 </dl>
-    
+
                             </div>
                             <!-- 버튼 -->
                             <div class="button-wrap">
@@ -1056,7 +1056,7 @@
                             <div class="submit-done-box">
                                 <div class="tit-done"><span class="color-h"><em>LG전자 앰버서더 3기</em></span>모집에<br>지원해주셔서 감사합니다.</div>
                             </div>
-                        
+
                         </main>
                     </section>
                     <!--// 08. 지원감사 -->
@@ -1110,9 +1110,9 @@
                         </header>
                         <main>
                             <ul class="sns-list">
-                                <li><a href="javascript:fn_kakao_share();" class="kakao"><i></i><span>카카오톡</span></a></li> 
-                                <li><a href="javascript:fn_f_share_link();" class="facebook"><i></i><span>페이스북</span></a></li> 
-                                <li><a href="javascript:fn_link_share();" class="clipboard"><i></i><span>URL복사</span></a></li> 
+                                <li><a href="javascript:fn_kakao_share();" class="kakao"><i></i><span>카카오톡</span></a></li>
+                                <li><a href="javascript:fn_f_share_link();" class="facebook"><i></i><span>페이스북</span></a></li>
+                                <li><a href="javascript:fn_link_share();" class="clipboard"><i></i><span>URL복사</span></a></li>
                             </ul>
                         </main>
                     </section>
@@ -1124,7 +1124,7 @@
 
 
     <script type="text/javascript">
-        // 메인 비디오 
+        // 메인 비디오
         function setMainVideoSource() {
             var isMobile = window.innerWidth <= 768;
             var $videoPC = $('#main-video-pc');
@@ -1290,7 +1290,7 @@
                 const fileInput = document.querySelector('#file-upload-input');
                 const preview = document.querySelector('#upload-preview');
 
-                fileInput.addEventListener('change', () => {  
+                fileInput.addEventListener('change', () => {
                     const files = Array.from(fileInput.files);
 
                     if(files.length > 10) {
@@ -1303,7 +1303,7 @@
                     let filesize = 0;
 
                     // 기존 내용 초기화 후 파일 추가
-                    // preview.innerHTML = "";  
+                    // preview.innerHTML = "";
                     files.forEach(file => {
                         if(file.size > 1024*1024*10) {
                             filesize = (file.size / 1024 / 1024).toFixed(2);
@@ -1323,10 +1323,10 @@
                                         <button data-index='${file.lastModified}' class='file-remove'>X</button>
                                     </p>`;
                                 } else {
-                                    jsErrorMessagePrint("사진은 최대 10장까지만 가능합니다.");                                
+                                    jsErrorMessagePrint("사진은 최대 10장까지만 가능합니다.");
                                 }
                             } else {
-                                jsErrorMessagePrint("이미지 파일(jpg, jpeg, png, gif)만 등록 할 수 있습니다");                                
+                                jsErrorMessagePrint("이미지 파일(jpg, jpeg, png, gif)만 등록 할 수 있습니다");
                             }
                         }
                     });
@@ -1401,7 +1401,7 @@
                 const currentSection = button.closest('.info-cont-wrap'); // 현재 클릭한 버튼이 속한 section
                 const nextSection = currentSection.nextElementSibling; // 다음 section
 
-                switch(currentSection.id) {                    
+                switch(currentSection.id) {
                     case "pop-info1":
                         if( !$("#chk1-1").is(":checked") ) {
                             jsErrorMessagePrint("개인정보 수집 이용을 동의해 주세요.");
@@ -1443,7 +1443,7 @@
                             jsErrorMessagePrint("이메일을 정확하게 입력해 주세요");
                             //  $("#f_user_mail").focus();
                             return;
-                        } 
+                        }
                         if( $("#f_user_nicknane").val().trim() == "") {
                             jsErrorMessagePrint("닉네임을 정확하게 입력해 주세요");
                             //  $("#f_user_mail").focus();
@@ -1451,25 +1451,25 @@
                         }
                         break;
                     case "pop-info3":
-                            
+
                         if( $("#serviceChk1-1").is(":checked") == false &&  $("#serviceChk1-2").is(":checked") == false) {
                             jsErrorMessagePrint("현재 LG전자 제품을 선택해 주세요.");
                             //  $("#serviceChk1-1").focus();
                             return;
                         }
-                            
+
                         if( $("#f_product_appliances").val().trim() == "") {
                             jsErrorMessagePrint("보유하고 계신 LG전자 제품을 입력해 주세요.");
                             //  $("#f_product_appliances").focus();
                             return;
                         }
-                            
+
                         if( $("#f_product_reason").val().trim() == "") {
                             jsErrorMessagePrint("LG전자를 좋아하는 이유를 입력해 주세요.");
                             //  $("#f_product_reason").focus();
                             return;
                         }
-                            
+
                         if( $("#subscribeChk1-1").is(":checked") == false &&  $("#subscribeChk1-2").is(":checked") == false) {
                             jsErrorMessagePrint("현재 ‘LG전자 가전 구독’ 서비스를 선택해 주세요.");
                             //  $("#subscribeChk1-1").focus();
@@ -1485,16 +1485,16 @@
 
                         break;
                     case "pop-info4":
-                            
+
                         if( $("#upload-preview").html().trim() == "") {
                             jsErrorMessagePrint("이미지를 첨부해 주세요.");
                             //  $("#f_product_file").focus();
                             return;
                         }
                         break;
-                    
+
                     case "pop-info5":
-                            
+
                         if( !$("input[name='f_main_platform']:checked").val() ) {
                             jsErrorMessagePrint("활동 중인 SNS 채널을 선택해 주세요.");
                             //  $("#serviceChk2-1").focus();
@@ -1509,27 +1509,27 @@
                                 //  $("#f_main_ig_url").focus();
                                 return;
                             }
-                                
+
                             if( !$("input[name='f_main_ig_followers']:checked").val() ) {
                                 jsErrorMessagePrint("인스타그램 팔로워 수를 선택해 주세요.");
                                 //  $("#followChk1-1").focus();
                                 return;
                             }
                         }
-                        if(serviceChk2_2) {                            
+                        if(serviceChk2_2) {
                             if( $("#f_main_yt_url").val().trim() == "") {
                                 jsErrorMessagePrint("유튜브 채널 URL을 입력해 주세요.");
                                 //  $("#f_main_yt_url").focus();
                                 return;
                             }
-                                
+
                             if( !$("input[name='f_main_yt_followers']:checked").val() ) {
                                 jsErrorMessagePrint("유튜브 구독자 수를 선택해 주세요.");
                                 //  $("#ytFollowChk1-1").focus();
                                 return;
                             }
                         }
-                            
+
                         if( !$("input[name='f_main_category']:checked").val() ) {
                             jsErrorMessagePrint("채널 카테고리를 선택해 주세요.");
                             //  $("#channelChk1-1").focus();
@@ -1540,13 +1540,13 @@
                             jsErrorMessagePrint("메인 채널 카테고리 기타를 입력해 주세요.");
                             return;
                         }
-                            
+
                         if( $("#f_main_concept").val().trim() == "") {
                             jsErrorMessagePrint("내 채널 컨셉에 대해 입력해 주세요.");
                             //  $("#f_main_concept").focus();
                             return;
                         }
-                            
+
                         if( !$("input[name='f_main_part']:checked").val() ) {
                             jsErrorMessagePrint("희망하는 부문을 1개 선택해 주세요.");
                             //  $("#hopeChk1-1").focus();
@@ -1661,15 +1661,15 @@
             for (let i = 0; i < dataTransfer.files.length; i++) {
                 formData.append("f_product_file[]", dataTransfer.files[i]);
             }
-            
+
             $('input[name="f_main_platform"]:checked').each(function() {
                 formData.append("f_main_platform[]", $(this).val());
             });
-            
+
             $('input[name="f_main_category"]:checked').each(function() {
                 formData.append("f_main_category[]", $(this).val());
             });
-            
+
             $('input[name="f_sub_course"]:checked').each(function() {
                 formData.append("f_sub_course[]", $(this).val());
             });
@@ -1720,7 +1720,7 @@
                 }
             });
         });
-        
+
         function fn_f_share_link()
         {
             let url = window.location.href;
