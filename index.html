@@ -48,7 +48,7 @@
             }
         })();
     </script>
-    <link rel="stylesheet" type="text/css" href="pc/css/common.css?2025032602">
+    <link rel="stylesheet" type="text/css" href="pc/css/common.css?2025032501">
 
 	<div class="wrap _pc">
 		<div class="view_wrap">
@@ -67,8 +67,8 @@
                             <video id="main-video-pc" autoplay loop muted playsinline preload="auto">
                                 <source src="./pc/video/main_visual.mp4" type="video/mp4">
                             </video>
-                            <video id="main-video-mo" poster="./mo/images/poster.jpg" autoplay loop muted playsinline preload="auto">
-                                <source src="./pc/video/main_visual_m.mp4?2025082603" type="video/mp4">
+                            <video id="main-video-mo" autoplay loop muted playsinline preload="auto">
+                                <source src="./pc/video/main_visual_m.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
 
                     <div class="btn-wraps">
                         <a class="button-report" href="https://forms.gle/pNH18iDQZxvnjNW49" target="_blank"><span class="blind">찐팬 제보하기</span></a>
-                        <a class="button-share" href="javascript:modal('dialog3');"><span class="blind">내 주변 찐팬에게 공유하기</span></a>
+                        <a class="button-share" onClick="modal('dialog3')"><span class="blind">내 주변 찐팬에게 공유하기</span></a>
                     </div>
 				</div>
 
@@ -377,7 +377,7 @@
                                 <!-- 이메일주소 -->
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="f_user_mail" class="">메일주소</label>
+                                        <label for="userEmail" class="">메일주소</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
@@ -389,15 +389,15 @@
                                 <!-- 이메일추천인 닉네임/이름주소 -->
                                 <dl class="forms">
                                     <dt class="tit">
-                                        <label for="f_user_nicknane" class="">추천인 닉네임/이름 <span class="txt-sm">(선택)</span></label>
+                                        <label for="f_user_nicknane" class="">추천인 닉네임/이름</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
                                             <input type="text" id="f_user_nicknane" name="f_user_nicknane" value="" maxlength="150" placeholder="닉네임/이름을 입력해 주세요(ex. LG찐팬/김엘지)">
                                         </div>
-                                        <!-- <ul class="bullet-list">
+                                        <ul class="bullet-list">
                                             <li class="b-txt">별도의 추천인이 없을 경우 ‘없음’으로 기입해주세요.</li>
-                                        </ul> -->
+                                        </ul>
                                     </dd>
                                 </dl>
                             </div>
@@ -434,7 +434,7 @@
                             <div class="form-wrap">
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>현재 LG전자 제품을 보유 중이신가요?</label>
+                                        <label for="serviceChk1-1">현재 LG전자 제품을 보유 중이신가요?</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="select-list-wrap">
@@ -472,7 +472,7 @@
                                 </dl>
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>현재 ‘LG전자 가전 구독’ 서비스를 이용 중이신가요?</label>
+                                        <label for="subscribeChk1-1">현재 ‘LG전자 가전 구독’ 서비스를 이용 중이신가요?</label>
                                     </dt>
                                     <dd class="noti">‘LG전자 가전 구독’이란? 원하는 가전에 편리한 케어 서비스까지 고객의 생활에 맞춰 자유롭게 선택할 수 있는 LG전자만의 라이프 맞춤 구독 서비스 입니다.</dd>
                                     <dd class="conts">
@@ -490,7 +490,7 @@
                                 </dl>
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="f_product_appliances_subscribe">구독 중인 제품이 있을 시 제품명을 입력해주세요.</label>
+                                        <label for="f_product_appliances_subscribe">구독 중인 제품이 있을 시 제품명을 입력해주세요. <span class="txt-sm">(선택)</span></label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap count">
@@ -532,7 +532,7 @@
                             <div class="form-wrap">
                                 <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>제품 사진 업로드</label>
+                                        <label for="">제품 사진 업로드</label>
                                     </dt>
                                     <dd class="mid-desc mg-left">
                                         보유 중인 LG전자 제품과 함께 시간을 보내고 있는 사진을 업로드해주세요.<br />
@@ -598,12 +598,12 @@
                         <main>
                             <div class="mid-title">
                                 <div class="tit">메인 SNS 채널</div>
-                                <div class="sub">앰버서더로 활동할 채널에 대해 응답해주세요.</div>
+                                <div class="sub">앰버서더로 활동할 채널에 대해 소개해주세요.</div>
                             </div>
                             <div class="form-wrap">
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>활동 중인 SNS 채널을 모두 선택해주세요. (복수 응답 가능)</label>
+                                        <label for="serviceChk2-1">활동 중인 SNS 채널을 모두 선택해주세요. (복수 응답 가능)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="select-list-wrap">
@@ -618,7 +618,7 @@
                                         </div>
                                     </dd>
                                 </dl>
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
                                         <label for="f_main_ig_url">인스타그램 계정 URL</label>
                                     </dt>
@@ -629,9 +629,9 @@
                                         </div>
                                     </dd>
                                 </dl>
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>인스타그램 팔로워 수</label>
+                                        <label for="followChk1-1">인스타그램 팔로워 수</label>
                                     </dt>
                                     <dd class="conts">
                                         <div id="" class="select-list-wrap">
@@ -666,18 +666,18 @@
                                                         <label for="followChk1-5">1만 명 이상</label>
                                                     </span>
                                                 </li>
-                                                <!-- <li class="lists">
+                                                <li class="lists">
                                                     <span class="rdo-wrap">
                                                         <input type="radio" id="followChk1-6" name="f_main_ig_followers" value="6" disabled>
                                                         <label for="followChk1-6">해당 없음</label>
                                                     </span>
-                                                </li> -->
+                                                </li>
                                             </ul>
                                         </div>
                                     </dd>
                                 </dl>
 
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
                                         <label for="f_main_yt_url">유튜브 채널 URL</label>
                                     </dt>
@@ -687,16 +687,16 @@
                                         </div>
                                     </dd>
                                 </dl>
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>유튜브 구독자 수</label>
+                                        <label for="ytFollowChk1-1">유튜브 구독자 수</label>
                                     </dt>
                                     <dd class="conts">
                                         <div id="" class="select-list-wrap">
                                             <ul class="list-wrap col2">
                                                 <li class="lists">
                                                     <span class="rdo-wrap">
-                                                        <input type="radio" id="ytFollowChk1-1" name="f_main_yt_followers" value="1" disabled>
+                                                        <input type="radio" id="ytFollowChk1-1" name="f_main_yt_followers" value="1" checked>
                                                         <label for="ytFollowChk1-1">500명 미만</label>
                                                     </span>
                                                 </li>
@@ -724,20 +724,20 @@
                                                         <label for="ytFollowChk1-5">1만 명 이상</label>
                                                     </span>
                                                 </li>
-                                                <!-- <li class="lists">
+                                                <li class="lists">
                                                     <span class="rdo-wrap">
                                                         <input type="radio" id="ytFollowChk1-6" name="f_main_yt_followers" value="5" disabled>
                                                         <label for="ytFollowChk1-6">해당 없음</label>
                                                     </span>
-                                                </li> -->
+                                                </li>
                                             </ul>
                                         </div>
                                     </dd>
                                 </dl>
 
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>채널 카테고리 (최대 2개 선택)</label>
+                                        <label for="snsChk-1">채널 카테고리 (최대 2개 선택)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div id="" class="select-list-wrap">
@@ -816,7 +816,7 @@
                                     </dd>
                                 </dl>
 
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
                                         <label for="f_main_concept">내 채널 컨셉에 대해 간단히 소개해주세요.(최대 50자)</label>
                                     </dt>
@@ -827,9 +827,9 @@
                                     </dd>
                                 </dl>
 
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>희망하는 부문을 1개 선택해주세요.</label>
+                                        <label for="hopeChk1-1">희망하는 부문을 1개 선택해주세요.</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="select-list-wrap">
@@ -889,9 +889,9 @@
                                 <div class="sub">활동 중인 서브 채널 보유하고 있는 경우에만 응답해주세요.</div>
                             </div>
                             <div class="form-wrap">
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>서브 채널 플랫폼 <span class="txt-sm">(선택)</span></label>
+                                        <label for="serviceChk2-1">서브 채널 플랫폼(선택)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="select-list-wrap">
@@ -922,9 +922,9 @@
                                         </div>
                                     </dd>
                                 </dl>
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label for="f_sub_url">서브 계정 URL <span class="txt-sm">(선택)</span></label>
+                                        <label for="f_sub_url">서브 계정 URL(선택)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div class="input-wrap">
@@ -932,9 +932,9 @@
                                         </div>
                                     </dd>
                                 </dl>
-                                <dl class="forms block-type depth2">
+                                <dl class="forms block-type">
                                     <dt class="tit">
-                                        <label>LG전자 앰버서더를 알게 된 경로 (복수 응답 가능)</label>
+                                        <label for="followChk1-1">LG전자 앰버서더를 알게 된 경로 (복수 응답 가능)</label>
                                     </dt>
                                     <dd class="conts">
                                         <div id="" class="select-list-wrap">
@@ -1261,18 +1261,15 @@
 
         //모달 열기
         function modal(id){
-            $("#" + id).fadeIn();
-            // 팝업창 열릴 때 body 스크롤 비활성화
-            $('body').addClass('modal-open');
+            $("#" + id).fadeIn()
         }
+        // modal('dialog3')
 
         //모달 닫기
         $('.modal-close').on('click', function(e){
             e.preventDefault();
             const modal = $(this).parents('.dialog');
             modal.fadeOut();
-            // 팝업창 닫힐 때 body 스크롤 다시 활성화
-            $('body').removeClass('modal-open');
         });
 
         function initForm() {
@@ -1447,13 +1444,14 @@
                             //  $("#f_user_mail").focus();
                             return;
                         }
-                        // if( $("#f_user_nicknane").val().trim() == "") {
-                        //     jsErrorMessagePrint("닉네임을 정확하게 입력해 주세요");
-                        //     //  $("#f_user_mail").focus();
-                        //     return;
-                        // }
+                        if( $("#f_user_nicknane").val().trim() == "") {
+                            jsErrorMessagePrint("닉네임을 정확하게 입력해 주세요");
+                            //  $("#f_user_mail").focus();
+                            return;
+                        }
                         break;
                     case "pop-info3":
+
                         if( $("#serviceChk1-1").is(":checked") == false &&  $("#serviceChk1-2").is(":checked") == false) {
                             jsErrorMessagePrint("현재 LG전자 제품을 선택해 주세요.");
                             //  $("#serviceChk1-1").focus();
@@ -1484,17 +1482,19 @@
                                 return;
                             }
                         }
+
                         break;
                     case "pop-info4":
-                        if( $("#serviceChk1-1").is(":checked") == true) {
-                            if( $("#upload-preview").html().trim() == "") {
-                                jsErrorMessagePrint("이미지를 첨부해 주세요.");
-                                //  $("#f_product_file").focus();
-                                return;
-                            }
+
+                        if( $("#upload-preview").html().trim() == "") {
+                            jsErrorMessagePrint("이미지를 첨부해 주세요.");
+                            //  $("#f_product_file").focus();
+                            return;
                         }
                         break;
+
                     case "pop-info5":
+
                         if( !$("input[name='f_main_platform']:checked").val() ) {
                             jsErrorMessagePrint("활동 중인 SNS 채널을 선택해 주세요.");
                             //  $("#serviceChk2-1").focus();
@@ -1566,10 +1566,10 @@
                         }
                         break;
                     case "pop-info7":
-                        jsFormSubmit();
                         return;
                         break;
                     case "pop-info8":
+                        jsFormSubmit();
                         return;
                         break;
                     default :
@@ -1583,12 +1583,6 @@
 
                     // 다음 섹션 보이기
                     nextSection.classList.add('active');
-
-                    // 팝업 스크롤을 제일 위로 올리기
-                    const popupMain = nextSection.querySelector('main');
-                    if (popupMain) {
-                        popupMain.scrollTop = 0;
-                    }
                 }
             });
         });
@@ -1723,12 +1717,6 @@
 
                     // 이전 섹션 보이기
                     prevSection.classList.add('active');
-
-                    // 팝업 스크롤을 제일 위로 올리기
-                    const popupMain = prevSection.querySelector('main');
-                    if (popupMain) {
-                        popupMain.scrollTop = 0;
-                    }
                 }
             });
         });
@@ -1778,4 +1766,4 @@
 
 </body>
 </html>
-<!--    2025082605  -->
+<!--    2025082501  -->
