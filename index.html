@@ -1288,7 +1288,6 @@
 
         $("input[name='f_sub_platform']").click(function() {
             var previousValue = $(this).data('storedValue');
-            console.log(previousValue);
             if(previousValue) {
                 $(this).prop('checked', !previousValue);
                 $(this).data('storedValue', !previousValue);
