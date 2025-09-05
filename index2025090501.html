@@ -305,7 +305,7 @@
                         <div class="menu-box">
                             <a href="javascript:$('.gnb_close').click();popupKakaoWebview();"
                                class="menu-btn type-black">로그인</a>
-                            <a href="/users/join" class="menu-btn type-white">회원가입</a>
+                            <a href="https://jammy.lge.co.kr/users/join" class="menu-btn type-white">회원가입</a>
                         </div>
                     </div>
                             </div>
@@ -467,7 +467,7 @@
     });
 
     $("button.jca-user-out-btn").on("click", function (event) {
-      location.href = "/users/withdraw";
+      location.href = "https://jammy.lge.co.kr/users/withdraw";
     });
 
     $(window).on("scroll", function () {
@@ -483,8 +483,7 @@
 </script>
 <div class="overlay_t"></div>
 <div class="view-box">
-    <div class="wrap _pc"
-    " style="width: 100%">
+    <div class="wrap _pc" style="width: 100%">
     <div class="view_wrap">
         <div class="content" style="width: 100%; padding-top: 0">
             <div class="section sec_1" id="sec1">
@@ -2039,7 +2038,7 @@
     // 기 신청 여부 확인
     $.ajax({
       cache: false,
-      url: "/events/ambassador_3rd/exists",
+      url: "https://jammy.lge.co.kr/events/ambassador_3rd/exists",
       type: 'POST',
       processData: false,
       contentType: false,
@@ -2473,7 +2472,7 @@
     document.body.style = 'overflow: hidden';
     $.ajax({
       cache: false,
-      url: "/events/ambassador_3rd/apply",
+      url: "https://jammy.lge.co.kr/events/ambassador_3rd/apply",
       type: 'POST',
       processData: false,
       contentType: false,
@@ -2716,7 +2715,7 @@
 
   function openOtherBrowser(redirectUrl) {
     localStorage.setItem("closeInApp", "true");
-    location.href = "/users/kakao_webview?referer=" + encodeURIComponent(redirectUrl);
+    location.href = "https://jammy.lge.co.kr/users/kakao_webview?referer=" + encodeURIComponent(redirectUrl);
   }
 
   $('#closeModal').on('click', function () {
