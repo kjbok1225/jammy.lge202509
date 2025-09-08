@@ -2996,3 +2996,79 @@
 </section>
 </body>
 </html>
+
+<style>
+    /* 스카이배너 추가 */
+.sky-banner {
+  position: fixed;
+  right: max(10px, env(safe-area-inset-right));
+  bottom: max(15px, env(safe-area-inset-bottom));
+  z-index: 11;
+  
+}
+.sky-banner .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.sky-banner .btn-top,
+.sky-banner .btn-bottom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 50%;
+  border-radius: 9999px;
+  text-decoration: none;
+  background-size: contain;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);   /* 그림자 */
+}
+.sky-banner .btn-top:hover,
+.sky-banner .btn-bottom:hover {
+  filter: brightness(1.1);
+}
+@media (min-width: 768px) {
+  .sky-banner .btn-top,
+  .sky-banner .btn-bottom {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .sky-banner .btn-top,
+  .sky-banner .btn-bottom {
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+  }
+}
+/* 붉은색일때 */
+/* .sky-banner .btn-top {
+  background-image: url("./pc/images/btn_apply.png");
+} */
+
+/* 검정색일때 */
+.sky-banner .btn-top {
+  background-image: url("./pc/images/btn_apply_black.png");
+}
+
+.sky-banner [aria-disabled=true] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .sky-banner {
+    right: 15px;
+    bottom: max(50px, env(safe-area-inset-bottom));
+  }
+}
+@media (min-width: 1024px) {
+  .sky-banner {
+    bottom: 30px;
+    right:30px;
+  }
+}
+</style>
