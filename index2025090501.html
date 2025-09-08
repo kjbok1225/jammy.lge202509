@@ -3068,3 +3068,25 @@
   pointer-events: none;
 }
 </style>
+<script>
+    // 디바이스 감지 및 sky-banner 클래스 적용
+        function detectDeviceAndApplySkyBanner() {
+            const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
+            const skyBanner = document.querySelector('.sky-banner');
+            
+            if (skyBanner) {
+                // 기존 클래스 제거
+                skyBanner.classList.remove('mobile-device', 'pc-device');
+                
+                // 디바이스에 따른 클래스 추가
+                if (isMobile) {
+                    skyBanner.classList.add('mobile-device');
+                } else {
+                    skyBanner.classList.add('pc-device');
+                }
+            }
+        }
+
+        // 페이지 로드 시 실행
+        document.addEventListener('DOMContentLoaded', detectDeviceAndApplySkyBanner);
+</script>
