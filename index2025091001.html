@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="kr">
 <head>
@@ -46,11 +45,11 @@
                     <!-- 영상  -->
                     <div id="ambassdor-ani" class="ambassdor-ani">
                         <div class="video-container">
-                            <video id="main-video-pc" autoplay loop muted playsinline preload="auto">
-                                <source src="./pc/video/main_visual.mp4?2025082813" type="video/mp4">
+                             <video id="main-video-pc" autoplay loop muted playsinline preload="auto">
+                                <source src="./pc/video/main_visual.mp4" type="video/mp4">
                             </video>
-                            <video id="main-video-mo" poster="./mo/images/poster.jpg" autoplay loop muted playsinline preload="auto">
-                                <source src="./pc/video/main_visual_m.mp4?2025082813" type="video/mp4">
+                            <video id="main-video-mo" autoplay loop muted playsinline preload="auto">
+                                <source src="./pc/video/main_visual_m.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -64,7 +63,7 @@
 					<div class="_fixed_wrap">
 						<div class="layout">
 							<!-- 지원안내 -->
-							<a href="#sec3" class="_current">
+							<a href="#sec3" class="">
                                 <picture class="img">
                                     <source srcset="pc/images/tabs_pc_01_off.png" media="(min-width: 769px)">
                                     <img src="mo/images/tabs_mo_01_off.png" alt="지원 안내 Off" class="_off">
@@ -105,8 +104,8 @@
 				<div class="section sec_3 _fixed_content" id="sec3">
 					<div class="layout">
                         <picture class="img">
-                            <source srcset="pc/images/sec_02.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_02.png" alt="">
+                            <source srcset="pc/images/sec_02_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_02_1.png" alt="">
                         </picture>
                     </div>
 				</div>
@@ -114,28 +113,28 @@
 				<div class="section sec_4" id="sec4">
 					<div class="layout">
                         <picture class="img">
-                            <source srcset="pc/images/sec_03.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_03.png" alt="">
+                            <source srcset="pc/images/sec_03_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_03_1.png" alt="">
                         </picture>
                     </div>
 
-				</div>
+				</div>				
 
 				<div class="section sec_5" id="sec5">
 					<div class="layout">
                          <picture class="img">
-                            <source srcset="pc/images/sec_04.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_04.png" alt="">
+                            <source srcset="pc/images/sec_04_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_04_1.png" alt="">
                         </picture>
                     </div>
-                    <button class="button-apply" onClick="initForm();"><span class="blind">LG전자 앰버서더 지원하기</span></button>
+                    <button class="button-apply" onClick="modal('dialog')"><span class="blind">LG전자 앰버서더 지원하기</span></button>
 				</div>
 
 				<div class="section sec_6 _fixed_content" id="sec6">
 					<div class="layout">
                         <picture class="img">
-                            <source srcset="pc/images/sec_05.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_05.png" alt="">
+                            <source srcset="pc/images/sec_05_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_05_1.png" alt="">
                         </picture>
                     </div>
 				</div>
@@ -143,8 +142,8 @@
 				<div class="section sec_7 _fixed_content" id="sec7">
 					<div class="layout">
                         <picture class="img">
-                            <source srcset="pc/images/sec_06.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_06.png" alt="">
+                            <source srcset="pc/images/sec_06_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_06_1.png" alt="">
                         </picture>
                     </div>
                     <!-- 비디오 -->
@@ -162,36 +161,35 @@
                     </div>
 
                     <div class="btn-wraps">
-                        <a class="button-report" href="https://forms.gle/pNH18iDQZxvnjNW49" target="_blank"><span class="blind">찐팬 제보하기</span></a>
-                        <!-- <a class="button-share" href="javascript:modal('dialog3');"><span class="blind">내 주변 찐팬에게 공유하기</span></a> -->
-                         <button type="button" class="button-share" onclick="modal('dialog3');"><span class="blind">내 주변 찐팬에게 공유하기</span></button>
+                        <a class="button-report" onClick=""><span class="blind">찐팬 제보하기</span></a>
+                        <a class="button-share" onClick="modal('dialog3')"><span class="blind">내 주변 찐팬에게 공유하기</span></a>
                     </div>
 				</div>
 
 				<div class="section sec_8" id="sec8">
 					<div class="layout">
-                        <picture class="img">
-                            <source srcset="pc/images/sec_07.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_07.png" alt="">
+                         <picture class="img">
+                            <source srcset="pc/images/sec_07_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_07_1.png" alt="">
                         </picture>
                     </div>
-                    <button class="button-apply" onClick="initForm();"><span class="blind">LG전자 앰버서더 지원하기</span></button>
+                    <a class="button-apply" onclick="modal('dialog')"><span class="blind">LG전자 앰버서더 지원하기</span></a>
 				</div>
 
                 <div class="section sec_9" id="sec9">
 					<div class="layout">
-                        <picture class="img">
-                            <source srcset="pc/images/sec_08.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_08.png" alt="">
+                         <picture class="img">
+                            <source srcset="pc/images/sec_08_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_08_1.png" alt="">
                         </picture>
                     </div>
 				</div>
 
                 <div class="section sec_10" id="sec10">
 					<div class="layout">
-                        <picture class="img">
-                            <source srcset="pc/images/sec_09.png" media="(min-width: 769px)">
-                            <img src="mo/images/sec_09.png" alt="">
+                         <picture class="img">
+                            <source srcset="pc/images/sec_09_1.png" media="(min-width: 769px)">
+                            <img src="mo/images/sec_09_1.png" alt="">
                         </picture>
                     </div>
 				</div>
