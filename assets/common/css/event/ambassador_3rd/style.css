@@ -545,7 +545,7 @@ body {
   display: none !important;
 }
 
-.active {
+.custom-active {
   display: block !important;
 }
 /*# sourceMappingURL=common.css.map */
