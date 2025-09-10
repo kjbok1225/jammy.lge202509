@@ -2044,6 +2044,7 @@
       contentType: false,
       dataType: "json",
       success: function (response) {
+        console.log(response.code);
         switch (response.code) {
           case 200:
             modal('dialog');
