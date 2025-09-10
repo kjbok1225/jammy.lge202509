@@ -193,14 +193,14 @@ body {
   width: 100%;
   height: 100%;
   bottom: 0;
-  background-image: url("../images/sec_05_bg.png");
+  background-image: url("../../../img/event/ambassador_3rd/pc/sec_05_bg.png");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 1920px auto;
 }
 @media only screen and (max-width: 768px) {
   .sec_6::after {
-    background-image: url("../../mo/images/sec_05_bg.png");
+    background-image: url("../../../img/event/ambassador_3rd/mo/sec_05_bg.png");
     background-size: cover;
   }
 }
@@ -212,7 +212,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .sec_6::after {
-    background-image: url("../../mo/images/sec_05_bg.png");
+    background-image: url("../../../img/event/ambassador_3rd/mo/sec_05_bg.png");
     background-size: contain;
   }
 }
