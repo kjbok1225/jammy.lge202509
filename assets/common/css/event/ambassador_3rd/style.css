@@ -597,7 +597,7 @@ body {
   margin-top: 10px;
 }
 .sky-banner .btn-top {
-  background-image: url("../images/btn_apply.png");
+  background-image: url("../../../img/event/ambassador_3rd/pc/btn_apply.png");
 }
 .sky-banner [aria-disabled=true] {
   cursor: not-allowed;
