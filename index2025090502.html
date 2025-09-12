@@ -94,9 +94,9 @@
 
             <script>
           digitalData.pageInfo = {"content_depth1":"Jammy","content_depth2":"Jammy|EVENT","content_depth3":"Jammy|EVENT|Jammy 앰버서더 3기 모집","content_depth4":"","content_depth5":""}        </script>
-    
-    
-    
+
+
+
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -1886,7 +1886,7 @@
 
       if (cleanTarget === "#sec6") {
         if (window.innerWidth > 768) { // PC일 때만 적용
-          extraOffset = -25;
+        //   extraOffset = -25;
         }
       }
 
@@ -3042,7 +3042,7 @@
     function detectDeviceAndApplySkyBanner() {
         const isMobile = /(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/i.test(navigator.userAgent);
         const skyBanner = document.querySelector('.sky-banner');
-        
+
         if (skyBanner) {
             skyBanner.classList.remove('mobile-device', 'pc-device');
             if (isMobile) {
