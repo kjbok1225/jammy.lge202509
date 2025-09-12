@@ -1884,11 +1884,12 @@
       var cleanTarget = $.trim(target).toLowerCase();
       var headerHeight = $('header').outerHeight();
 
-      if (cleanTarget === "#sec6") {
-        if (window.innerWidth > 768) { // PC일 때만 적용
-        //   extraOffset = -25;
-        }
-      }
+    //   if (cleanTarget === "#sec6") {
+    //     if (window.innerWidth > 768) { // PC일 때만 적용
+    //        extraOffset = -25;
+    //     }
+    //   }
+      if(cleanTarget === '#sec3') extraOffset -= 10;
 
       if ($target.length) {
         $('html, body').stop().animate({
@@ -1919,7 +1920,6 @@
             var offsetTop = $sec.offset().top;
             var height = $sec.outerHeight();
             fixedContentHeight += height;
-            if(id == '#sec3') offsetTop += 10;
             sectionInfo.push({
               id: id,
               top: offsetTop,
