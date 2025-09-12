@@ -1919,6 +1919,7 @@
             var offsetTop = $sec.offset().top;
             var height = $sec.outerHeight();
             fixedContentHeight += height;
+            if(offsetTop == 'sec3') offsetTop += 5;
             sectionInfo.push({
               id: id,
               top: offsetTop,
